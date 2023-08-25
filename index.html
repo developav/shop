@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normolize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        
+        <section class="section">
+            <div class="container">
+                    <article class="interest">
+                        <h2 class="interest__head head">профиль и интересы</h2>
+                        <p class="interest__description description">Здесь вы можете изменять свой email и пароль, а также указать дополнительные номера телефонов для использован ия вашей карты и указать свои интересы</p>
+                        <form class="interest__form" action="#">
+                            <label class="interest__block" for="interest__mail"><span class="interest__label">Email</span><span class="interest__mail-label"></span>
+                                <input class="interest__input interest__mail" type="text" placeholder="ivan@mail.ru">
+                                <button class="interest__mail-button btn">сохранить</button>
+                            </label>
+                            <label class="interest__block" for="interest__password"><span class="interest__label">Пароль</span>
+                                <input class="interest__input interest__password" type="password" placeholder="******">
+                                <button class="interest__password-button btn">изменить</button>
+                            </label>
+                        </form>
+                    </article>
+                    <article class="contacts">
+                        <h2 class="contacts__head head">дополнительные контактные телефоны</h2>
+                        <p class="contacts__description description">Вы можете добавить до двух дополнительных номеров телефона.Указанные номера могут быть использованы членами вашей семьи для получения скидки, накопления баллов и покупок по вашей карте</p>
+                        <form action="#">
+                            <label for="contacts__phone1"> Телефон 1
+                                <input id="contacts__phone1" type="tel" pattern="2-[0-9]{3}-[0-9]{3}" placeholder="+7(___) ___-____"   value="" class="tel">
+                                <button class="contacts__phone1-button btn">сохранить</button>
+                            </label>
+                            <label for="contacts__phone2"> Телефон 2
+                                <input id="contacts__phone2" type="tel" pattern="2-[0-9]{3}-[0-9]{3}" placeholder="+7(___) ___-____"   value="" class="tel">
+                                <button class="contacts__phone2-button btn">изменить</button>
+                            </label>
+                        </form>
+                    </article>
+                    <article class="shop">
+                        <h2 class="shop__head head">подписка на увеличенную скидку</h2>
+                        <p class="shop__description description">Вы можете выбрать один магазин для предоставления увеличенной скидки. Выбор можно сделать не более 1 раза в месяц. По истечению календарного месяца скидка будет обнулена автоматически</p>
+                        <form action="#">
+                            <div class="shop__multySelect">
+                                <div class="selectBox" onclick="showCheckboxes()">
+                                    <select>
+                                        <option>Выберите магазин</option>
+                                    </select>
+                                    <div class="overSelect"></div>
+                                </div>
+                                <div id="checkBoxes">
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label calvin"></span>
+                                            <img src="/img/calvin.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox"> 
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label tommy"></span>
+                                            <img src="/img/tommy.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/wear1.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/markis.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/truman.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/clanks.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/soho.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/reima.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/mexx.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/crocs.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/origamy.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="custom-checkbox" >
+                                            <input type="checkbox"/>
+                                            <span class="custom__checkbox-label"></span>
+                                            <img src="/img/mexx.svg" alt="Логотип бренда">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                    <article class="promo">
+                        <h2 class="promo__head head">ПОДПИСКА НА УВЕДОМЛЕНИЯ ОБ АКЦИЯХ</h2>
+                        <p class="promo__description description">Вы можете выбрать один или несколько магазинов, по которым  вам интересно получать предложения</p>
+                        <div class="promo__group">
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/TOMMY-LOGO-.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/CK-LOGO.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/crocs.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/wear.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/ecfb93c34aa6a6ca16c68d5122a37064.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/reima.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/shop7.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/soho.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/mexx.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/shop11.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label"></span>
+                                    <img src="/img/promo/origamy.svg" alt="Логотип бренда">
+                                </label>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="brand">
+                        <h2 class="brand__head head">ЛЮБИМЫЙ БРЕНД</h2>
+                        <p class="brand__description description">Расскажите нам о своих любимых брендах, а мы учтем ваш выбор при составлении индивидуальных предложений</p>
+                        <div class="brand__group">
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">CALVIN KLEIN JEANS</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label ">CALVIN KLEIN JEANS</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">CALVIN KLEIN JEANS</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">UNITED COLORS OF BENETTON</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">UNITED COLORS OF BENETTON</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">UNITED COLORS OF BENETTON</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">REIMA</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">REIMA</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">REIMA</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">STRELLSON</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">STRELLSON</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" />
+                                    <span class="custom__checkbox-label brand__label">STRELLSON</span>
+                                </label>
+                            </div>
+                        </div>
+                    </article>
+            </div>
+        </section>
+    </main>
+    <script defer src="/js/main.js"></script>
+</body>
+</html>

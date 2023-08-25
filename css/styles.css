@@ -1,0 +1,202 @@
+body {
+    font-family: 'Montserrat';
+}
+.container{
+    max-width: 1060px;
+    margin: 0 auto;
+}
+/*interest*/
+
+.head {
+    margin-bottom: 43px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #090A22;
+    text-transform: uppercase;
+}
+.description {
+    margin-bottom: 33px;
+    font-size: 14px;
+    line-height: 130%;
+}
+.interest__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 66%;
+}
+.interest__block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 48%;
+}
+.interest__label{
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.interest__mail-label {
+    position: absolute;
+    content: ' ';
+    top: -11px;
+    left: 53px;
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/Group86.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.interest__input {
+    padding-left: 20px;
+    max-width: 100%;
+    min-height: 60px;
+    font-size: 15px;
+    color: #636480;
+    background-color: #FFFFFF;
+    border: 1px solid #ECECEE;
+    border-radius: 5px;
+}
+.btn {
+    padding: 0;
+    align-self: end;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    text-align: end;
+    min-width: 88px;
+    min-height: 24px;
+    font-size: 13px;
+    color: #88D790;
+    background-image: url('/img/Edit.png');
+    background-repeat: no-repeat;
+    background-position: 10px 3px;
+
+}
+
+
+
+
+
+
+
+
+.shop__multySelect {
+    width: 690px;
+    background-color: #BCC2C1;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* #checkBoxes {
+    display: none;
+    border: 1px #8DF5E4 solid;
+}
+
+#checkBoxes label {
+    display: block;
+}
+
+#checkBoxes label:hover {
+    background-color: #4F615E;
+} */
+
+
+/*checbox*/
+.checkbox {
+    line-height: 52px;
+    margin-bottom: 0.2em;
+  }
+
+  #checkBoxes{
+    display: none;
+    height: 0;
+    overflow: hidden;
+  }
+  /* для элемента input c type="checkbox" */
+  .custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  /* для элемента label, связанного с .custom-checkbox */
+  .custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  /* создание в label псевдоэлемента before со следующими стилями */
+  .custom-checkbox>span::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  /* стили при наведении курсора на checkbox */
+  .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #b7d7ff;
+  }
+
+  /* стили для активного чекбокса (при нажатии на него) */
+  .custom-checkbox>input:not(:disabled):active+span::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+  }
+
+  /* стили для чекбокса, находящегося в фокусе */
+  .custom-checkbox>input:focus+span::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  .custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: #80bdff;
+  }
+
+  /* стили для чекбокса, находящегося в состоянии checked */
+  .custom-checkbox>input:checked+span::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  .custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+  }
+  .custom__checkbox-label{
+    width: 200px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .brand__label{
+    width: 30%;
+  }
