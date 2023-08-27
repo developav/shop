@@ -1,9 +1,11 @@
 body {
     font-family: 'Montserrat';
+    min-width: 320px;
 }
 .container{
     max-width: 1060px;
     margin: 0 auto;
+    padding: 50px 20px;
 }
 /*interest*/
 
@@ -19,28 +21,36 @@ body {
     font-size: 14px;
     line-height: 130%;
 }
-.interest__form {
+.form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 66%;
 }
-.interest__block {
+.block {
     display: flex;
     flex-direction: column;
     position: relative;
-    min-width: 48%;
+    width: 333px;
+}
+.group__label{
+    display: flex;
+    flex-direction: column;
 }
 .interest__label{
-    font-size: 24px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #636480;
     margin-bottom: 7px;
 }
 
 .interest__mail-label {
     position: absolute;
     content: ' ';
-    top: -11px;
-    left: 53px;
+    top: -4px;
+    left: 45px;
     width: 32px;
     height: 32px;
     background-image: url('../img/Group86.svg');
@@ -50,13 +60,25 @@ body {
 .interest__input {
     padding-left: 20px;
     max-width: 100%;
-    min-height: 60px;
+    min-height: 56px;
     font-size: 15px;
     color: #636480;
     background-color: #FFFFFF;
     border: 1px solid #ECECEE;
     border-radius: 5px;
+    transition: border 0.3s linear, outline 0.3s linear;
 }
+.interest__input:hover{
+    border:1px solid #feb916;
+}
+.interest__input:focus-visible{
+    border:1px solid #feb916;
+    outline: none;
+}
+.interest__input:active{
+    border:1px solid #feb916;
+}
+
 .btn {
     padding: 0;
     align-self: end;
@@ -66,35 +88,55 @@ body {
     text-align: end;
     min-width: 88px;
     min-height: 24px;
-    font-size: 13px;
-    color: #88D790;
-    background-image: url('/img/Edit.png');
+    font-size: 13px;  
+    transition: color 0.3s linear;
+    color: #FFB911;
+    background-image: url('/img/Edit.svg');
     background-repeat: no-repeat;
     background-position: 10px 3px;
-
 }
-
-
-
-
-
-
-
-
+.btn:hover{
+  color:#f0aa00
+}
+.disabled-input {
+    pointer-events: none;
+    background-color: #f1f1f1;
+ }
+.disable__btn {
+    color: #88D790;
+    background-image: url('/img/Editdisabled.svg');
+    background-repeat: no-repeat;
+    background-position: 10px 3px;
+ }
+ 
+.shop__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    overflow-y: scroll;
+    background-image: url("data:image/svg+xml,<svg height='15px' width='15px' viewBox='0 0 16 16' fill='%23c4e1ee' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: calc(100% - 15px) center;
+    width: 100%;
+    height: 80px;
+    font-size: 14px;
+    font-weight: lighter;
+    padding-left: 30px;
+    border: 1px solid #ECECEE;
+    border-radius: 5px;
+}
 .shop__multySelect {
-    width: 690px;
-    background-color: #BCC2C1;
+    max-width: 690px;
+    background-color: #FFFFFF;
 }
 
 .selectBox {
     position: relative;
+    border: 1px solid #ECECEE;
+    border-radius: 5px;
 }
-
-.selectBox select {
-    width: 100%;
-    font-weight: bold;
-}
-
 .overSelect {
     position: absolute;
     left: 0;
@@ -119,84 +161,153 @@ body {
 
 /*checbox*/
 .checkbox {
+    padding: 20px 30px;
     line-height: 52px;
-    margin-bottom: 0.2em;
-  }
+    border: 1px solid #ECECEE;
+}
 
-  #checkBoxes{
+#checkBoxes{
     display: none;
     height: 0;
-    overflow: hidden;
+    overflow-y: scroll;
   }
-  /* для элемента input c type="checkbox" */
-  .custom-checkbox>input {
+.custom-checkbox>input {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
-
-  /* для элемента label, связанного с .custom-checkbox */
-  .custom-checkbox>span {
+.custom-checkbox>span {
     display: inline-flex;
     align-items: center;
     user-select: none;
   }
-
-  /* создание в label псевдоэлемента before со следующими стилями */
-  .custom-checkbox>span::before {
+.custom-checkbox>span::before {
     content: '';
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 1px solid #adb5bd;
+    border: 1px solid #F99F24;
     border-radius: 0.25em;
     margin-right: 0.5em;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
-  }
-
-  /* стили при наведении курсора на checkbox */
-  .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
-    border-color: #b7d7ff;
-  }
-
-  /* стили для активного чекбокса (при нажатии на него) */
-  .custom-checkbox>input:not(:disabled):active+span::before {
-    background-color: #b3d7ff;
-    border-color: #b3d7ff;
-  }
-
-  /* стили для чекбокса, находящегося в фокусе */
-  .custom-checkbox>input:focus+span::before {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-
-  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-  .custom-checkbox>input:focus:not(:checked)+span::before {
-    border-color: #80bdff;
-  }
-
-  /* стили для чекбокса, находящегося в состоянии checked */
-  .custom-checkbox>input:checked+span::before {
-    border-color: #0b76ef;
-    background-color: #0b76ef;
+}
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #F99F24;
+}
+.custom-checkbox>input:not(:disabled):active+span::before {
+    background-color: #F99F24;
+    border-color: #F99F24;
+}
+.custom-checkbox>input:focus+span::before {
+    box-shadow: 0 0 0 0.2rem rgba(249, 159, 36, 0.25);
+}
+.custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: #F99F24;
+}
+.custom-checkbox>input:checked+span::before {
+    border-color: #F99F24;
+    background-color: #F99F24;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-  }
-
-  /* стили для чекбокса, находящегося в состоянии disabled */
-  .custom-checkbox>input:disabled+span::before {
+}
+.custom-checkbox>input:disabled+span::before {
     background-color: #e9ecef;
-  }
-  .custom__checkbox-label{
+}
+.custom__checkbox-label{
     width: 200px;
     height: 40px;
     background-repeat: no-repeat;
     background-position: center;
-  }
+}
+.promo__group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkbox__promo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 268px;
+    min-height: 70px;
+}
+.checkbox__promo:nth-child(3n){
+    margin-right: 0;
+}
+.checkbox__card {
+    max-width: 50px;
+}
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand__text {
+    min-width: 95%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+.footer__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 46px 20px;
+    background-color: #F8F8FA;
+}
+.footer__head{
+    margin: 0;
+    font-size: 14px;
+}
+.footer__link {
+    text-decoration: none;
+}
+@media (max-width: 1050px) {
+.container{
+    max-width: 950px;
+}
+.group__label {
+    width: 100%;
+}
+.block {
+  width: 100%;
+}
+.form {
+  max-width: 100%;
+}
+.shop__multySelect {
+  max-width: 100%;
+}
 
-  .brand__label{
-    width: 30%;
-  }
+.checkbox__promo:nth-child(3n) {
+  margin-right: 30px;
+}
+.checkbox__promo:nth-child(2n) {
+  margin-right: 0;
+}
+.promo__group {
+  justify-content: center;
+}
+.checkbox__promo {
+  min-width: 35%;
+}
+  
+}
+@media (max-width: 690px) {
+  .checkbox__promo {
+    width: 47%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+}
+.checkbox__promo:nth-child(3n) {
+  margin-right: 0px;
+}
+.custom-checkbox img {
+  width: 80%;
+}
+}

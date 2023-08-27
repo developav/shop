@@ -1,7 +1,7 @@
-var show = true;
-  
+let show = true;
+let open = document.querySelector('.shop__select');
         function showCheckboxes() {
-            var checkboxes = 
+            let checkboxes = 
                 document.getElementById("checkBoxes");
   
             if (show) {
@@ -9,10 +9,12 @@ var show = true;
                 checkboxes.style.height = "400px";
                 checkboxes.style.overflow = "auto";
                 show = false;
+                open.classList.add('select__open');
+
             } else {
                 checkboxes.style.display = "none";
                 checkboxes.style.height = "0";
-                checkboxes.style.overflow = "hidden";
+                // checkboxes.style.overflow = "hidden";
                 show = true;
             }
         }
@@ -21,12 +23,12 @@ var show = true;
 
 window.addEventListener("DOMContentLoaded", function() {
     [].forEach.call( document.querySelectorAll('.tel'), function(input) {
-    var keyCode;
+    let keyCode;
     function mask(event) {
         event.keyCode && (keyCode = event.keyCode);
-        var pos = this.selectionStart;
+        let pos = this.selectionStart;
         if (pos < 3) event.preventDefault();
-        var matrix = "+7 (___) ___ ____",
+        let matrix = "+7 (___) ___ ____",
             i = 0,
             def = matrix.replace(/\D/g, ""),
             val = this.value.replace(/\D/g, ""),
@@ -38,7 +40,7 @@ window.addEventListener("DOMContentLoaded", function() {
             i < 5 && (i = 3);
             new_value = new_value.slice(0, i)
         }
-        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+        let reg = matrix.substr(0, this.value.length).replace(/_+/g,
             function(a) {
                 return "\\d{1," + a.length + "}"
             }).replace(/[+()]/g, "\\$&");
@@ -55,3 +57,37 @@ window.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+// save email and password btn
+let save = document.querySelector('.btn__save-mail');
+let change = document.querySelector('.btn__change-password');
+let inputEmail = document.querySelector('.interest__mail');
+let inputPassword = document.querySelector('.interest__password');
+let saveNumber = document.querySelector('.contacts__phone1-button');
+let changeNumber = document.querySelector('.contacts__phone2-button');
+let tel = document.querySelector('.tel');
+let tel2 = document.querySelector('.tel2')
+
+save.addEventListener('click', () => {
+    save.setAttribute('disabled','disabled');
+    save.classList.add('disable__btn');
+    inputEmail.classList.add('disabled-input');
+    inputPassword.classList.add('disabled-input');
+})
+change.addEventListener('click', () => {
+    save.removeAttribute('disabled','disabled');
+    inputEmail.classList.remove('disabled-input');
+    inputPassword.classList.remove('disabled-input');
+    save.classList.remove('disable__btn');
+});
+saveNumber.addEventListener('click', () => {
+    saveNumber.setAttribute('disabled', 'disabled');
+    save.classList.add('disable__btn');
+    tel.classList.add('disabled-input');
+    tel2.classList.add('disabled-input');
+});
+changeNumber.addEventListener('click', () => {
+    saveNumber.removeAttribute('disabled', 'disabled');
+    save.classList.remove('disable__btn');
+    tel.classList.remove('disabled-input');
+    tel2.classList.remove('disabled-input');
+})
