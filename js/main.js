@@ -60,6 +60,7 @@ window.addEventListener("DOMContentLoaded", function() {
 // save email and password btn
 let save = document.querySelector('.btn__save-mail');
 let change = document.querySelector('.btn__change-password');
+let input = document.querySelectorAll('.interest__input')
 let inputEmail = document.querySelector('.interest__mail');
 let inputPassword = document.querySelector('.interest__password');
 let saveNumber = document.querySelector('.contacts__phone1-button');
@@ -68,7 +69,7 @@ let tel = document.querySelector('.tel');
 let tel2 = document.querySelector('.tel2')
 
 save.addEventListener('click', () => {
-    save.setAttribute('disabled','disabled');
+    [...document.querySelectorAll('.interest__input')].forEach(i => i.setAttribute('disabled', 'disabled'));
     save.classList.add('disable__btn');
     inputEmail.classList.add('disabled-input');
     inputPassword.classList.add('disabled-input');
@@ -80,6 +81,7 @@ change.addEventListener('click', () => {
     save.classList.remove('disable__btn');
 });
 saveNumber.addEventListener('click', () => {
+    [...document.querySelectorAll('.contacts__input')].forEach(i => i.setAttribute('disabled', 'disabled'));
     saveNumber.setAttribute('disabled', 'disabled');
     save.classList.add('disable__btn');
     tel.classList.add('disabled-input');
